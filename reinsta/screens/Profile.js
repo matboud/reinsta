@@ -1,14 +1,36 @@
 import React from 'react';
-import { ExpoConfigView } from '@expo/samples';
+import {
+  SafeAreaView,
+  Image,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import { WebBrowser } from 'expo';
+
+import { MonoText } from '../components/StyledText';
 
 export default class Profile extends React.Component {
   static navigationOptions = {
-    title: 'app.json',
+    header: null,
   };
 
   render() {
-    /* Go ahead and delete ExpoConfigView and replace it with your
-     * content, we just wanted to give you a quick view of your config */
-    return <ExpoConfigView />;
+    return (
+      <SafeAreaView style={styles.container}>
+        <Text>Profile</Text>
+      </SafeAreaView>
+    );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center'
+  }
+});
