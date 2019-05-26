@@ -1,9 +1,9 @@
 import React from 'react';
 import {Flatlist, StyleSheet, Text, View, Image} from 'react-native';
 
-class feed extends React.Component{
+class Feed extends React.Component{
 
 
 }
 
-export default feed;
+export default Feed;

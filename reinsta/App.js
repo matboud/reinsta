@@ -1,26 +1,26 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import {View} from 'react-native';
 import { createStackNavigator, createAppContainer } from "react-navigation";
+import Feed from './src/screens/Feed';
+import Upload from './src/screens/Upload';
+import Profile from './src/screens/Profile';
 
-import feed from './src/screens/Feed.js';
-import profile from './src/screens/Profile.js';
-import upload from './src/screens/Upload.js';
 
 const AppNavigator = createStackNavigator({
-  Feed: {
-    screen: feed,
+  Profile: {
+    screen: Profile,
     navigationOptions: {
       header: null
     }
   },
   Upload: {
-    screen: upload,
+    screen: Upload,
     navigationOptions: {
       header: null,
     }
   },
-  Profile: {
-    screen: profile,
+  Feed: {
+    screen: Feed,
     navigationOptions: {
       header: null,
     }
@@ -30,19 +30,17 @@ const AppNavigator = createStackNavigator({
 
 const AppContainer = createAppContainer(AppNavigator);
 
-export default class App extends React.Component {
+class App extends Component {
+
   render() {
     return (
-      <AppContainer />
+      <View>
+          <AppContainer />
+      </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+export default App;
