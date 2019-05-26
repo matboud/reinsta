@@ -21,7 +21,10 @@ export default class Feed extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <Text>feed</Text>
+        <View style={styles.header}> 
+          <Text style={styles.headerTitle}>Feed</Text>
+        </View>
+        
       </SafeAreaView>
     );
   }
@@ -30,7 +33,21 @@ export default class Feed extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center'
+  },
+  // header:
+  header: {
+    height: 40,
+    paddingBottom: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: 'lightgray'
+  },
+  headerTitle: {
+    fontSize: 20,
+    fontWeight: '500'
   }
+  // end header
+
+  
 });
