@@ -56,8 +56,8 @@ export default class Feed extends React.Component {
             // items to render
             <View style={styles.containerPost} key={index}>
               <View style={styles.postHead}>
-                <Text>timing</Text>
                 <Text>@name</Text>
+                <Text>timing</Text>
               </View>
               <View style={styles.postImage}>
                 <Image
